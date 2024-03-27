@@ -118,3 +118,14 @@ public class HomeController {
 
 </project>
 
+
+
+(base) Rajmohans-MBP:certs raj$ openssl genrsa -out keypair.pem 2048
+Generating RSA private key, 2048 bit long modulus (2 primes)
+..............................+++++
+.....................................+++++
+e is 65537 (0x010001)
+(base) Rajmohans-MBP:certs raj$ openssl rsa -in keypair.pem -pubout -out public.pem
+writing RSA key
+(base) Rajmohans-MBP:certs raj$ openssl pkcs8 -topk8 -inform PEM -outform PEM -nocrypt -in keypair.pem -out private.pem
+
